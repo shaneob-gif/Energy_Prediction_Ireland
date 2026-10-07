@@ -1,0 +1,29 @@
+# data and artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+!data/*/.gitkeep
+*.parquet
+*.pkl
+*.joblib
+models_artifacts/
+
+# secrets
+.env
+*.key
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/
