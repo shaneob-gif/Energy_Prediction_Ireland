@@ -1,5 +1,6 @@
 import pandas as pd
 
+from itertools import pairwise
 from forecast.validation.walk_forward import make_folds
 
 
@@ -23,6 +24,6 @@ def test_holdout_is_never_touched():
 
 def test_folds_expand_and_dont_overlap_tests():
     folds = list(make_folds(_index(), 730, 180))
-    for a, b in zip(folds, folds[1:]):
+    for a, b in pairwise(folds):
         assert b.train_end > a.train_end
         assert b.test_start >= a.test_end
