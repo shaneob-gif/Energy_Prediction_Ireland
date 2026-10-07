@@ -1,6 +1,7 @@
+from itertools import pairwise
+
 import pandas as pd
 
-from itertools import pairwise
 from forecast.validation.walk_forward import make_folds
 
 
